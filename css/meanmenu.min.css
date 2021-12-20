@@ -33,7 +33,8 @@
  font-size:1px;
  display:block;
  font-family:Arial,Helvetica,sans-serif;
- font-weight:700
+ font-weight:700;
+ visibility: hidden;
 }
 .mean-container a.meanmenu-reveal span {
  display:block;
