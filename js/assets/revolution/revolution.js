@@ -49,7 +49,7 @@ $(document).ready(function () {
     /* Options are 'auto', 'fullwidth' or 'fullscreen' */
     sliderLayout: 'auto',
     // gridwidth: 1140,
-    gridheight:800,
+    gridheight:550,
     /* Navigation arrows and bullets */
     	navigation: {
      
