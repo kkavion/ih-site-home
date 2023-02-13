@@ -1094,7 +1094,7 @@ textarea {
  line-height:initial;
 }
 a {
- color:#337ab7;
+ color:#049dd9;
  text-decoration:none
 }
 a:focus,
@@ -3096,7 +3096,7 @@ textarea.input-lg {
 .btn {
  display:inline-block;
  padding:6px 12px;
- margin-bottom:0;
+ margin-bottom:5px;
  font-size:14px;
  font-weight:400;
  line-height:1.42857143;
@@ -3112,7 +3112,7 @@ textarea.input-lg {
  user-select:none;
  background-image:none;
  border:1px solid transparent;
- border-radius:4px
+ border-radius:10px;
 }
 .btn.active.focus,
 .btn.active:focus,
@@ -5566,7 +5566,7 @@ button.list-group-item-danger.active:hover {
  margin-top:0;
  margin-bottom:0;
  font-size:16px;
- color:inherit
+ color:inherit;
 }
 .panel-title>.small,
 .panel-title>.small>a,
@@ -5755,11 +5755,11 @@ button.list-group-item-danger.active:hover {
  border:0
 }
 .panel-group {
- margin-bottom:20px
+ margin:auto 15px;
 }
 .panel-group .panel {
  margin-bottom:0;
- border-radius:4px
+ border-radius:10px;
 }
 .panel-group .panel+.panel {
  margin-top:5px
@@ -5995,7 +5995,7 @@ button.close {
 .modal-dialog {
  position:relative;
  width:auto;
- margin:10px
+ margin:70px 10px;
 }
 .modal-content {
  position:relative;
@@ -6004,7 +6004,7 @@ button.close {
  background-clip:padding-box;
  border:1px solid #999;
  border:1px solid rgba(0,0,0,.2);
- border-radius:6px;
+ border-radius:10px;
  outline:0;
  -webkit-box-shadow:0 3px 9px rgba(0,0,0,.5);
  box-shadow:0 3px 9px rgba(0,0,0,.5)
@@ -6027,15 +6027,21 @@ button.close {
  opacity:.5
 }
 .modal-header {
- padding:15px;
- border-bottom:1px solid #e5e5e5
+ padding:15px 15px 100px 15px;
+ border-bottom:1px solid #e5e5e5;
+ background: url(../images/homepage/zbid2.webp);
+ background-position: center;
+ background-size: 100%;
+ border-radius: 10px 10px 0 0;
 }
 .modal-header .close {
  margin-top:-2px
 }
 .modal-title {
  margin:0;
- line-height:1.42857143
+ line-height:1.42857143;
+ font-weight: bold;
+ text-align: center;
 }
 .modal-body {
  position:relative;
@@ -6066,7 +6072,7 @@ button.close {
 @media (min-width:768px) {
  .modal-dialog {
   width:600px;
-  margin:30px auto
+  margin:100px auto;
  }
  .modal-content {
   -webkit-box-shadow:0 5px 15px rgba(0,0,0,.5);
@@ -6330,11 +6336,13 @@ button.close {
 .carousel {
  position:relative;
  width: ;
+ border-radius: 10px;
 }
 .carousel-inner {
  position:relative;
  width:100%;
- overflow:hidden
+ overflow:hidden;
+ border-radius: 10px 10px 0 0;
 }
 .carousel-inner>.item {
  position:relative;

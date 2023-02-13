@@ -22,11 +22,45 @@
   top: 0;
   width: 100%;
   box-shadow: 0 0 3px gray;
+  background: rgb(255, 253, 253) !important;
+  transition: all linear 0.3s;
+}
+.sticky .main-menu > li > a
+{
+     color: black;
 }
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content
 {
   padding-top: 60px;
+}
+header .header-bottom-area .main-menu > li:hover > a
+{
+     color: #f2911b;
+}
+.sticky .header-bottom-area .main-menu > li:hover > a
+{
+     color: #049dd9;
+}
+.sticky .header-bottom-area-4 .main-menu > li ul.dropdown
+{
+     border-top: 2px solid #049dd9;
+}
+.sticky .header-bottom-area .main-menu > li ul.dropdown li a:hover
+{
+     color: #049dd9 !important;
+}
+.sticky .header-bottom-area .main-menu > li > a:before
+{
+     background: #049dd9;
+}
+header .sticky .header-bottom-area .main-menu > li.active a
+{
+     color: #049dd9;
+}
+.sticky .dropdown li a
+{
+     color: black !important;
 }
 .padding-bottom
 {
@@ -75,13 +109,12 @@
 .popular-packages-carasoul .owl-nav 
 {
      text-align: center;
-     top: -20px;
+     top: 0px;
      position: relative;
 }
 .popular-packages-carasoul .owl-nav .owl-prev,.popular-packages-carasoul .owl-nav .owl-next
 {
      margin: 10px;
-     background: #049dd9 !important;
      border-radius: 4px;
      transition: all ease-in-out 0.3s !important;
      padding: 0 12px; 
@@ -111,16 +144,19 @@
 {
      margin-bottom: 0px;
 }
-.timeline-content img
-{
-     width: 3%;
-}
 .popular-country .container
 {
      padding: 0;
      width: unset;
 }
-.resort-table li:before
+.availability
+{
+     font-size: 12px;
+     padding: 7px 0;
+     display: block;
+     font-style: italic;
+}
+.availability::before
 {
      content: "\2731";
      padding-right:2px;
@@ -134,9 +170,8 @@
 .amenities-sec
 {
 	display:grid;
-	text-align:center;
+	text-align:left;
 	font-weight:bold;
-	align-content:center;
 }
 .amenities-sec img
 {
@@ -145,10 +180,49 @@
 .amenities-sec span
 {
 	font-size:13px;
+     text-align: left;
+     padding-top: 10px;
+     padding-left: 5px;
+}
+.amenities-sec span:nth-child(1)
+{
+	font-size:25px;
+     padding: 0;
+}
+.amenities-sec .col-sm-12
+{
+     margin-bottom: 25px;
 }
 .sec1
 {
-	padding: 20px 0 20px 0;
+	padding: 0px 0px;
+}
+.sec1 .mdi
+{
+     color: #525252;
+}
+.amenities-sec h3
+{
+     color: black;
+     padding: 20px 0px;
+}
+.terms-sec h4
+{
+     color: black;
+}
+.policy-sec h4
+{
+     background-color: #f0f0f0;
+}
+.policy-sec ol
+{
+     background-color: #f0f0f0;
+}
+.sec1 div
+{
+     display: flex;
+     margin: 5px 15px;
+     padding: 0;
 }
 .fact-file p
 {
@@ -156,15 +230,20 @@
 }
 .fact-file span
 {
-     color: #727272;
+     color: #353535;
 	font-weight: 400;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	padding-bottom:10px;
 }
-.fact-file .col-md-7,.fact-file .col-md-5
+.fact-file .col-md-6
 {
      padding-bottom:15px;
+}
+.fact-file .col-md-6:last-child span, .fact-file .col-md-6:last-child i
+{
+     font-size: 24px;
+     padding-right: 4px;
 }
 .resort-table .row
 {
@@ -187,7 +266,7 @@
   color: white;
   font-size: 13px;
   padding: 3px;
-  text-align: center;
+  text-align: left;
 }
 .resort-table li
 {
@@ -214,40 +293,93 @@
 }
 .timeline-content .box
 {
-	background-color: #f0f0f0;
-	border-radius: 5px;
+	background-color: white;
+	border-radius: 10px;
+     transition: all .3s ease-in-out;
+	border: 1px solid lightgray;
 }
 .timeline-content .resort-box
 {
-     background-color: #f5f5dc;
-	border-radius: 5px;
+     background-color: white;
+	border-radius: 10px;
+     transition: all .3s ease-in-out;
+     border: 1px solid lightgray;
 }
 .timeline-content .box:hover, .timeline-content .resort-box:hover
 {
 	box-shadow: 0 0 5px;
-     transition: all 0.3s ease-in-out;
 }
-.header-bottom-area .main-menu  li:hover  a {
-     color: #049dd9;
+.header-bottom-area .tab-a li:hover a,
+.header-bottom-area .tab-c li:hover a,
+.header-bottom-area .tab-d li:hover a,
+.header-bottom-area .tab-e li:hover a
+{
+     color: white;
+}
+.header-bottom-area .tab-a li,
+.header-bottom-area .tab-c li,
+.header-bottom-area .tab-d li, 
+.header-bottom-area .tab-e li
+{
+     transition: all 0.3s;
+}
+.header-bottom-area .tab-a li:hover,
+.header-bottom-area .tab-d li:hover,
+.header-bottom-area .tab-e li:hover
+{
+     background: #f2911b;
+}
+.header-bottom-area .tab-c li:hover
+{
+     background: #049dd9;
 }
 .header-bottom-area .tab-a > li > a {
      display: block;
-     color: black;
+     color: #f2911b;
      font-size: 17px;
      text-decoration: none;
      font-weight: 500;
      position: relative;
      text-align:center;
+     padding: 10px 30px;
 }
 .header-bottom-area .tab-a > li.active a {
-     color:  #049dd9 !important;
+     color:  white !important;
+}
+.header-bottom-area .tab-a > li.active
+{
+     background: #f2911b;
 }
 .header-bottom-area .tab-a > li {
      display: inline-block;
-     padding: 10px 40px 10px 40px;
+     padding: 0;
      position: relative;
-     box-shadow: 0 0px 1px gray;
-     background: #004cff1c;
+     background: white;
+     margin: 2px 0;
+     border-radius: 10px;
+     border: 1px solid lightgray;
+}
+.header-bottom-area .tab-a > li > a:before
+{
+     background: white !important;
+     bottom: 15% !important;
+     width: 50% !important;
+}
+.header-bottom-area .tab-c > li > a:before
+{
+     background: white !important;
+     bottom: 5px !important;
+     width: 60% !important;
+}
+.header-bottom-area .tab-d > li > a:before
+{
+     background: white !important;
+     bottom: 15% !important;
+     width: 50% !important;
+}
+.header-bottom-area .tab-e > li > a:before
+{
+     background: white !important;
 }
 .header-bottom-area .tab-a
 {
@@ -261,67 +393,103 @@
 }
 .header-bottom-area .tab-b > li > a {
      display: block;
-     color: black;
+     color: #f2911b;
      font-size: 15px;
      text-decoration: none;
      font-weight: 500;
      position: relative;
      text-align:center;
+     padding: 10px 30px;
 }
 .header-bottom-area .tab-b > li.active a {
-     color:  #049dd9 !important;
+     color:   white !important;
+}
+.header-bottom-area .tab-b > li.active
+{
+     background: #f2911b;
+}
+.header-bottom-area .tab-b > li:hover
+{
+     background: #f2911b;
+}
+.header-bottom-area .tab-b > li:hover a
+{
+     color: white;
 }
 .header-bottom-area .tab-b > li {
      display: inline-block;
-     padding: 0px 20px 0px 20px;
      position: relative;
+     border: 1px solid lightgray;
+     border-radius: 10px;
+     margin: 3px 0;
+     transition: all ease-in 0.3s;
+     padding: 0;
+}
+.tab-b > li > a::before
+{
+     background:  white !important;
+     bottom: 5px !important;
+     width: 60% !important;
 }
 
 .header-bottom-area .tab-c > li > a {
      display: block;
-     color: black;
+     color: #049dd9;
      font-size: 17px;
      text-decoration: none;
      font-weight: 500;
      position: relative;
      text-align:center;
+     padding: 10px 20px;
 }
 .header-bottom-area .tab-c > li.active a {
-     color: #049dd9 !important;
+     color: white !important;
+}
+.header-bottom-area .tab-c > li.active
+{
+     background: #049dd9;
 }
 .header-bottom-area .tab-c > li {
      display: inline-block;
-     padding: 10px 23px 10px 23px;
      position: relative;
-     box-shadow: 0 0px 1px gray;
+     border: 1px solid lightgray;
+     margin: 1px;
+     border-radius: 10px;
+     padding: 0;
 }
 .header-bottom-area .tab-c
 {
 	text-align:center;
-	padding: px;
 }
 .header-bottom-area .tab-c li
 {
-     background: #004cff1c;
+     background: white;
 }
 .header-bottom-area .tab-d > li > a {
      display: block;
-     color: black;
+     color: #f2911b;
      font-size: 17px;
      text-decoration: none;
      font-weight: 500;
      position: relative;
      text-align:center;
+     padding: 10px 30px;
 }
 .header-bottom-area .tab-d > li.active a {
-     color:  #049dd9 !important;
+     color:   white !important;
+}
+.header-bottom-area .tab-d > li.active
+{
+     background: #f2911b;
 }
 .header-bottom-area .tab-d > li {
      display: inline-block;
-     padding: 10px 32px 10px 32px;
+     padding: 0;
      position: relative;
-     box-shadow: 0 0px 1px gray;
-     background: #004cff1c;
+     border: 1px solid lightgray;
+     background: white;
+     margin: 1px;
+     border-radius: 10px;
 }
 .header-bottom-area .tab-d
 {
@@ -330,7 +498,7 @@
 
 .header-bottom-area .tab-e > li > a {
      display: block;
-     color: black;
+     color: white;
      font-size: 17px;
      text-decoration: none;
      font-weight: 500;
@@ -338,14 +506,15 @@
      text-align:center;
 }
 .header-bottom-area .tab-e > li.active a {
-     color:  #049dd9 !important;
+     color:  white !important;
 }
 .header-bottom-area .tab-e > li {
      display: inline-block;
      padding: 10px 20px;
      position: relative;
-     box-shadow: 0 0px 1px gray;
-     background: #004cff1c;
+     border: 1px solid lightgray;
+     background: #049dd9;
+     margin: 1px 0;
 }
 .header-bottom-area .tab-e
 {
@@ -363,7 +532,12 @@
      background-position: center bottom;
      z-index: 2;
 }
-.section-title2 h2:before, .section-title2 h2:after, .section-title-white h2:before, .section-title-white h2:after, .section-title-white-2 h2:before, .section-title-white-2 h2:after 
+.section-title2 h2:before,
+.section-title2 h2:after,
+.section-title-white h2:before,
+.section-title-white h2:after,
+.section-title-white-2 h2:before,
+.section-title-white-2 h2:after 
 {
      background: #454545 none repeat scroll 0 0;
      bottom: 3.8px;
@@ -397,7 +571,6 @@
 .demo img
 {
 	width: 100%;
-	height:500px;
 	object-fit: cover;
 }
 .fig-text
@@ -412,7 +585,7 @@
 }
 .logo-area img
 {
-     max-width: 90%;
+     max-width: 61%;
 }
 .subscribe-form
 {
@@ -428,13 +601,13 @@
      position: relative;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
      margin-bottom: 30px;
-     border-radius: 3px;
+     border-radius: 5px;
 }
 .top-destination-area .single-hotels .hotel-image
 {
      position: relative;
      overflow: hidden;
-     border-radius: 3px 3px 0 0;
+     border-radius: 5px 5px 0 0;
 }
 .top-destination-area .single-hotels .hotel-image img
 {
@@ -476,6 +649,10 @@
 {
      font-size: 19px;
 }
+.main-menu li
+{
+     cursor: pointer;
+}
 .left-btn
 {
      float: left;
@@ -488,18 +665,13 @@
 {
      min-width: 100px !important;
 }
-.single-package-area .header-bottom-area
-{
-     margin-top: 20px;
-}
 .tab-content .header-bottom-area
 {
      margin-top: 0px;
 }
-.timeline-content .discount-package-4-btn
+.box .travel-primary-btn-2
 {
      float: right;
-     padding-bottom: 10px;
 }
 .resort-table .discount-package-4-btn
 {
@@ -534,7 +706,6 @@ header .header-bottom-area .main-menu li:last-child
 {
      background: #71bf44 !important;
      padding: 10px;
-     margin: 5px;
 }
 header .header-bottom-area .main-menu .dropdown li:last-child
 {
@@ -543,6 +714,11 @@ header .header-bottom-area .main-menu .dropdown li:last-child
      margin: 0;
 }
 header .header-bottom-area .main-menu li:last-child a
+{
+     color: white;
+     font-size: small;
+}
+header .sticky .header-bottom-area .main-menu li:last-child a
 {
      color: white;
      font-size: small;
@@ -585,21 +761,25 @@ header .main-menu a:focus
 }
 .single-hotels ul
 {
-     padding: 2% 40%;
+     padding: 5% 40%;
 }
 .single-package-carasoul .package-location span img
 {
      padding: 0 25px 25px 0 ;
 }
+.box h3
+{
+     margin-bottom: 5px;
+}
 .box .resort-table .discount-package-4-btn  a
 {
      background: #049dd9;
+     transition: 0.3s all ease-in;
 }
 .box .resort-table .discount-package-4-btn a:hover
 {
      background: #faa61a;
      color: white;
-     transition: 0.3s all ease-in;
 }
 .fact-file
 {
@@ -607,11 +787,20 @@ header .main-menu a:focus
 }
 .amenities-row span
 {
-     padding: 0 5px;
+     cursor: pointer;
+     color: gray !important;
 }
-.amenities-row span:nth-child(1)
+.resort-box .amenities-row
 {
-     padding-left: 0;
+     padding-bottom: 0;
+}
+.amenities-row span
+{
+     padding-right: 10px;
+}
+.amenities-row .material-icons
+{
+     font-size: 20px !important;
 }
 .logo-box img
 {
@@ -624,7 +813,7 @@ header .main-menu a:focus
 i
 {
      font-family: 'Open Sans', sans-serif;
-     font-size: 17px;
+     font-size: 18px;
 }
 .form-control 
 { 
@@ -636,6 +825,11 @@ i
 {
      margin-bottom: 5px;
      padding: 0;
+}
+.foot i
+{
+     font-size: 16px !important;
+     color: white;
 }
 .tagline i
 {
@@ -666,6 +860,7 @@ button
 .hotel-description h5
 {
      font-weight: bold;
+     text-align: center;
 }
 .top-destination-area .single-hotels:hover .hotel-description h5
 {
@@ -676,6 +871,20 @@ button
 {
      visibility: hidden;
      position: absolute;
+}
+.testimonial-area-5 .single-testimonial .img-box img
+{
+     width: auto;
+     height: 350px;
+     margin-left: 5px;
+}
+.testimonial-area-5 .single-testimonial .col-md-5
+{
+     padding: 50px 0;
+}
+.testimonial-area-5 .single-testimonial .testimonial-messages i
+{
+     font-size: 20px;
 }
 .career-menu a
 {
@@ -765,23 +974,1448 @@ button
 {
      font-size: 20px;
 }
-.resort-box h3,.resort-box h4,.resort-box span
+.resort-box h3, .resort-box h4, .resort-box h5, .resort-box span:nth-child(1)
 {
-     color: rgb(133, 61, 9);
      font-family: 'Open Sans', sans-serif;
-}
-.resort-box .material-icons
-{     
-     font-family: 'Material Icons';
      color: black;
+}
+.resort-box .resort-table .row:nth-child(1)
+{
+     background: #8080801a !important;
+}
+.footer-contact li a
+{
+     color: #aaa;
+     font-size: 14px;
+
+}
+.footer-contact a.ftrr-text
+{
+     color: #ddd;
 }
 .footer-contact li a:hover
 {
-     color: black !important;
      font-weight: bold !important;
+     color: #ccc;
 }
 .footer-contact li .ftrr-txt-ttl-dsc:hover
 {
      color: black !important;
      font-weight: 400 !important;
+}
+.section-title2 a
+{
+     text-decoration: none;
+     color: black;
+     font-size: 30px;
+     font-weight: bold;
+}
+.carousel-control .mdi
+{
+     color: white !important;
+}
+#discstick 
+{
+     width: 110px;
+     height: 31px;
+     background: red;
+     position: relative;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     border-radius: 10px;
+     margin: 10px;
+     margin-left: 20px;
+     right: 25px;
+}
+#discstick span, #discstick a
+{
+     margin: 20px;
+     font-size: 20px;
+     font-weight: bold;
+     color: white;
+     text-align: center;
+     margin-left: 18px;
+}
+.package-location #discstick 
+{
+     width: 100px;
+     height: 31px;
+     background: red;
+     position: relative;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     border-radius: 10px;
+     margin: 0;
+     transition: all 0.3s ease-in-out;
+     right: 0;
+}
+.single-package-carasoul:hover .package-location #discstick
+{
+     transform: scale(1.1);
+}
+.package-location #discstick a
+{
+     font-size: 20px;
+     font-weight: bold;
+     color: white;
+     position: relative;
+     top: 4px;
+     margin: 0;
+     width: 100%;
+}
+.box
+{
+     margin: 20px 0 50px 0;
+     border: 1px solid #fff;
+}
+.resort-box
+{
+     margin: 20px 0 50px 0;
+     border: 1px solid #fff;
+}
+.x-text-center
+{
+     padding: 50px 0;
+     font-size: 15px;
+}
+.x-margin
+{
+     margin: 50px 15px;
+}
+.floated-text-right
+{
+     font-weight: normal;
+     font-size: 15px;
+     float: right;
+     padding: 6px;
+     border-radius: 10px;
+     position: relative;
+     top: 1px;
+}
+.x-essence
+{
+     background: white !important;
+     text-align: left;
+}
+.x-essence .subscribe-form-box
+{
+     text-align: center;
+}
+.x-essence .btn
+{
+     padding: 0;
+}
+.x-essence .form-group .btn
+{
+     padding: 6px 12px;
+}
+.x-essence .subscribe-title
+{
+     margin-top: 0;
+     padding: 6px 12px;
+     color: white;
+}
+.x-essence button.close
+{
+     padding: 7px !important;
+}
+.x-essence .subscribe-form-box .btn-primary
+{
+     background-color: #f2911b;
+     border-color: #ff8f00;
+}
+.x-essence .subscribe-form-box .btn-primary:hover
+{
+     background-color: #049dd9;
+     border-color: #08f;
+}
+#climate h4, #transport h4, #wellness h4, #wedding h4, #conference h4, #direction h4
+{
+     padding-bottom: 10px;
+}
+#credits ul
+{
+     list-style: disc;
+     background-color: #f0f0f0;
+}
+#credits a
+{
+     text-decoration: none;
+     color: #049dd9;
+}
+.wellness-btn
+{
+     float: right !important;
+}
+.single-hotels .ct-action, .package-calto-action .ct-action
+{
+     margin-bottom: 0;
+}
+.ct-action
+{
+     margin-bottom: 35px;
+}
+.query
+{
+     background: #78bf45;
+     cursor: pointer;
+}
+.tour-description
+{
+     padding: 50px 0px 50px 20px;
+}
+.tour-description ul
+{
+     list-style: disc;
+     padding-left: 15px;
+}
+.tour-description h4
+{
+     padding-top: 10px;
+     padding-bottom: 10px;
+}
+.carousel .left
+{
+     margin-left: 0 !important;
+}
+.tour-description p
+{
+     text-align: justify;
+}
+.tour-description .head h4
+{
+     color: #f2911b;
+}
+.tour-description .tail h4
+{
+     color: #049dd9;
+}
+.tour-description .carousel
+{
+    margin-top: 15px;
+}
+/* The overlay effect with black background */
+.overlay1
+{
+     height: 100%;
+     width: 100%;
+     display: none;
+     position: fixed;
+     z-index: 10;
+     top: 0;
+     left: 0;
+     background-color: rgb(0,0,0);
+     background-color: rgba(0,0,0, 0.9); /* Black with a little bit see-through */
+     color: gray;
+}
+.overlay1 input::placeholder
+{
+     color: gray;
+     opacity: 1;
+     padding-left: 10px;
+}
+.overlay1 input::-ms-input-placeholder
+{
+     color: gray;
+     opacity: 1;
+     padding-left: 10px;
+}
+/* The content */
+.overlay-content
+{
+     position: relative;
+     top: 46%;
+     width: 80%;
+     text-align: center;
+     margin-top: 30px;
+     margin: auto;
+}
+/* Close button */
+.overlay1 .closebtn 
+{
+     position: absolute;
+     top: 5%;
+     right: 10%;
+     font-size: 2.5em;
+     cursor: pointer;
+     color: white;
+}   
+.overlay1 .closebtn:hover
+{
+     color: #888;
+}
+.main-menu button
+{
+     padding: 0;
+     border: none;
+     background: none;
+}
+.mean-bar button
+{
+     padding: 0;
+     border: none;
+     background: none;
+}
+.popular-country
+{
+     padding-bottom: 0px;
+     padding-top: 25px;
+}
+.single-package-details .tour-description
+{
+     padding: 0 0 25px 40px;
+}
+.single-package-details .main-timeline::before
+{
+     height: 95%;
+     left: 0;
+}
+.single-package-details .timeline-icon
+{
+     height: 30px !important;
+     width: 30px !important;
+     line-height: 30px !important;
+     font-size: 15px !important;
+     left: -14px !important;
+}
+.single-package-details .timeline-content
+{
+     padding: 1px 15px;
+}
+.gsc-control-cse
+{
+     margin: 150px 300px;
+     border-radius: 10px;
+}
+.gsc-control-cse button
+{
+     padding: 10px;
+     border: none;
+     background: gray;
+}
+.header-bottom-area .main-menu .dropdown2 {
+     position: absolute;
+     left: 18px;
+     top: 100% !important;
+     z-index: 999;
+     opacity: 0;
+     transition: all ease-in-out 0.2s;
+     text-align: left;
+     display: inline;
+     width: 40vw;
+     visibility: hidden;
+     transform-origin: 0 0 0;
+     transform: scaleY(0.4);
+}
+
+.header-bottom-area .main-menu .dropdown2 .dropdown-text
+{
+     width: auto;
+     padding: 0;
+     color: black;
+}
+.header-bottom-area .main-menu > li:hover .dropdown2
+{
+     opacity: 1;
+     visibility: visible;
+     top: 100%;
+     transform: scaleY(1);
+}
+.header-bottom-area .main-menu .dropdown2
+{
+     border-left: 2px solid #f2911b;
+}
+.sticky .header-bottom-area .main-menu .dropdown2
+{
+     border-left: 2px solid #049dd9;
+}
+header .header-bottom-area .main-menu .dropdown2 li
+{
+     background: rgba(255, 255, 255, 0.075) !important;
+}
+header .sticky .header-bottom-area .main-menu .dropdown2 li
+{
+     background: #fff !important;
+}
+header .header-bottom-area .main-menu .dropdown2 li a
+{
+     color: white;
+     font-size: 14px;
+     padding: 10px 20px 10px 10px;
+     display: inline-block;
+}
+header .sticky .header-bottom-area .main-menu .dropdown2 li a
+{
+     color: black;
+     font-size: 14px;
+     padding: 10px 20px 10px 10px;
+     display: inline-block;
+
+}
+.header-bottom-area .main-menu .dropdown2 .row
+{
+     position: absolute;
+     left: 13px;
+     border-left: 2px solid #f2911b;
+}
+.header-bottom-area .main-menu > li ul.dropdown2 li a:hover
+{
+     color: #f2911b;
+     margin-left: 5px;
+}
+.sticky .header-bottom-area .main-menu .dropdown2 .row
+{
+     position: absolute;
+     left: 13px;
+     border-left: 2px solid #049dd9;
+}
+.sticky .header-bottom-area .main-menu > li ul.dropdown2 li a:hover
+{
+     color: #049dd9;
+     margin-left: 5px;
+}
+.mean-nav .dropdown2 li
+{
+     background-color: #2c3035 !important;
+}
+
+
+
+.header-bottom-area .main-menu .dropdown3 {
+     position: absolute;
+     left: 65px;
+     top: 100% !important;
+     z-index: 999;
+     opacity: 0;
+     transition: all ease-in-out 0.2s;
+     text-align: left;
+     display: inline;
+     width: 20vw;
+     visibility: hidden;
+     transform-origin: 0 0 0;
+     transform: scaleY(-0.4);
+}
+
+.header-bottom-area .main-menu .dropdown3 .dropdown-text
+{
+     width: auto;
+     padding: 0;
+     color: black;
+}
+.header-bottom-area .main-menu > li:hover .dropdown3
+{
+     opacity: 1;
+     visibility: visible;
+     top: 100%;
+     transform: scaleX(-1);
+}
+.header-bottom-area .main-menu .dropdown3
+{
+     border-left: 2px solid #f2911b;
+}
+.sticky .header-bottom-area .main-menu .dropdown3
+{
+     border-left: 2px solid #049dd9;
+}
+header .header-bottom-area .main-menu .dropdown3 li
+{
+     background: rgba(255, 255, 255, 0.075) !important;
+}
+header .sticky .header-bottom-area .main-menu .dropdown3 li
+{
+     background: #fff !important;
+}
+header .header-bottom-area .main-menu .dropdown3 li a
+{
+     color: white;
+     font-size: 14px;
+     padding: 10px 20px 10px 10px;
+     display: inline-block;
+     transform: scaleX(-1);
+
+}
+header .sticky .header-bottom-area .main-menu .dropdown3 li a
+{
+     color: black;
+     font-size: 14px;
+     padding: 10px 20px 10px 10px;
+     display: inline-block;
+     transform: scaleX(-1);
+
+}
+.header-bottom-area .main-menu .dropdown3 .row
+{
+     position: absolute;
+     left: 13px;
+     border-left: 2px solid #f2911b;
+}
+.header-bottom-area .main-menu > li ul.dropdown3 li a:hover
+{
+     color: #f2911b;
+     margin-left: 5px;
+}
+.sticky .header-bottom-area .main-menu .dropdown3 .row
+{
+     position: absolute;
+     left: 13px;
+     border-left: 2px solid #049dd9;
+}
+.sticky .header-bottom-area .main-menu > li ul.dropdown3 li a:hover
+{
+     color: #049dd9;
+     margin-left: 5px;
+}
+.mean-nav .dropdown3 li
+{
+     background-color: #2c3035 !important;
+}
+.sticky2
+{
+     background: #202124 !important;
+}
+.home-interest-area .single-hotels .ct-action .travel-booking-btn
+{
+     background: #049dd9;
+}
+.home-interest-area .single-hotels .ct-action li:nth-child(1)
+{
+     display: grid;
+}
+.home-interest-area .single-hotels .ct-action li:nth-child(2)
+{
+     display: none;
+}
+.home-interest-area .single-hotels:hover .ct-action li:nth-child(1)
+{
+     display: none;
+     transition: all linear 0.6s;
+}
+.home-interest-area .single-hotels:hover .ct-action li:nth-child(2)
+{
+     display: grid;
+     transition: all linear 0.6s;
+}
+.sbuttons {
+     bottom: 90px;
+     position: fixed;
+     left: 0.5%;
+     z-index: 10;
+   }
+   .sbutton {
+     display: block;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     text-align: center;
+     color: white;
+     margin: 20px auto 0;
+     cursor: pointer;
+     -webkit-transition: all .1s ease-out;
+     transition: all .1s ease-out;
+     position: relative;
+     left: 1%;
+   }
+   .sbutton > i {
+     font-size: 24px;
+     line-height: 40px;
+     transition: all .2s ease-in-out;
+     transition-delay: 2s;
+   }
+   .sbutton:active,
+   .sbutton:focus,
+   .sbutton:hover {
+     box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+   }
+   .sbutton:not(:last-child) {
+     width: 40px;
+     height: 40px;
+     margin: 20px auto 0;
+     opacity: 0;
+   }
+   .sbutton:not(:last-child) > i {
+     font-size: 24px;
+     line-height: 40px;
+     transition: all .3s ease-in-out;
+   }
+   .sbuttons:hover .sbutton:not(:last-child) {
+     opacity: 1;
+     width: 40px;
+     height: 40px;
+     margin: 15px auto 0;
+   }
+   .sbutton:nth-last-child(1) {
+     -webkit-transition-delay: 25ms;
+     transition-delay: 25ms;
+   }
+   .sbutton:not(:last-child):nth-last-child(2) {
+     -webkit-transition-delay: 30ms;
+     transition-delay: 30ms;
+   }
+   .sbutton:not(:last-child):nth-last-child(3) {
+     -webkit-transition-delay: 50ms;
+     transition-delay: 50ms;
+   }
+   .sbutton:not(:last-child):nth-last-child(4) {
+     -webkit-transition-delay: 70ms;
+     transition-delay: 70ms;
+   }
+   .sbutton:not(:last-child):nth-last-child(5) {
+     -webkit-transition-delay: 90ms;
+     transition-delay: 90ms;
+   }
+   .sbutton:not(:last-child):nth-last-child(6) {
+     -webkit-transition-delay: 110ms;
+     transition-delay: 110ms;
+   }
+    
+   [tooltip]:before {
+     border-radius: 2px;
+     background-color: #202124;
+     color: #fff;
+     content: attr(tooltip);
+     font-size: 12px;
+     visibility: hidden;
+     opacity: 0;
+     padding: 3px 7px;
+     margin-left: 10px;
+     position: absolute;
+     left: 100%;
+     bottom: 20%;
+     white-space: nowrap;
+   }
+    
+   [tooltip]:hover:before,
+   [tooltip]:hover:after {
+     visibility: visible;
+     opacity: 1;
+   }
+   .sbutton.mainsbutton {
+     background: #049dd9;
+     border-radius: 10%;
+   }
+   .sbutton.youtube {
+     background: red;
+   }
+   .sbutton.twitt {
+     background: #1d9bf0;
+   }
+   .sbutton.fb {
+     background: #1877f2;
+   }
+   .sbutton.insta {
+     background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+   }
+.footer-contact span, .footer-contact i
+{
+     margin-right: 10px;
+     color: #ccc;
+}
+.timeline .carousel, .timeline .carousel-inner
+{
+     border-radius: 10px;
+     box-shadow: 0 0 3px gray;
+}
+.top-destination-area .search-btn button
+{
+     border: medium none;
+     position: relative;
+     background: #f2911b;
+     font-size: 14px;
+     padding: 7px;
+     width: 85%;
+     border-radius: 5px;
+     color: #ffffff;
+     font-weight: 500;
+     transition: all 0.3s ease-in-out;
+}
+.top-destination-area .search-btn
+{
+     padding: 0% 46%;
+     text-align: center;
+}
+.bidnwin
+{
+     background-image: url(../images/homepage/zbid1.webp);
+     background-repeat: repeat-x;
+     background-size: contain ;
+     padding-bottom: 185px;
+     padding-top: 25px
+}
+.bidnwin::before
+{
+     background-color: #0095da;
+}
+.bidnwin p
+{
+     color: black;
+}
+.bidnwin button
+{
+     border: medium none;
+     position: relative;
+     background: #049dd9 !important;
+     font-size: 14px;
+     padding: 10px;
+     width: 100%;
+     border-radius: 5px;
+     color: #ffffff;
+     font-weight: 600;
+}
+.bidnwin button:hover
+{
+     background: #f2911b !important;
+}
+.top-destination-area-5 .amenities-row span
+{
+     font-size: 18px !important;
+     padding: 0 7px;
+}
+.turnoff
+{
+     display: none !important;
+}
+.leisure-page-area .container,
+.wellness-page-area .container,
+.gourmet-page-area .container,
+.conference-page-area .container,
+.wedding-page-area .container
+{
+     padding-top: 15px;
+}
+.leisure-page-area .destination-5-description,
+.wellness-page-area .destination-5-description,
+.gourmet-page-area .destination-5-description,
+.conference-page-area .destination-5-description,
+.wedding-page-area .destination-5-description
+{
+     background-color: white;
+     border-radius: 0 0 10px 10px;
+}
+.leisure-page-area, .gourmet-page-area, .wedding-page-area, .conference-page-area, .wellness-page-area
+{
+     background-image: url("https://transparenttextures.com/patterns/subtle-white-feathers.png");
+}
+.resorts-bg, .rate-pg
+{
+     background-image: url("https://transparenttextures.com/patterns/xv.png") !important;
+}
+.rate-pg
+{
+     background-color: cornsilk !important;
+}
+.destination-bg
+{
+     background: #f5f5f5;
+     padding-top: 25px;
+}
+.section-margins
+{
+     margin-top: 25px;
+     margin-bottom: 25px;
+}
+.wedding-page-area .discount-package, .conference-page-area .discount-package
+{
+     margin-bottom: 0px;
+}
+.wedding-page-area .section-margins, .conference-page-area .section-margins
+{
+     margin-top: 0;
+     margin-bottom: 50px;
+}
+.tab-content .carousel-inner
+{
+     border-radius: 10px;
+}
+.leisure-page-area .section-title-3,
+.wellness-page-area .section-title-3,
+.gourmet-page-area .section-title-3,
+.conference-page-area .section-title-3,
+.wedding-page-area .section-title-3
+{
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 500;
+}
+.leisure-page-area .col-md-2,
+.wellness-page-area .col-md-2,
+.gourmet-page-area .col-md-2,
+.conference-page-area .col-md-2,
+.wedding-page-area .col-md-2
+{
+     text-align: center;
+}
+.faq-section h3
+{
+     padding-bottom: 25px;
+}
+.faq-section .panel-heading
+{
+     padding: 0;
+     border-radius: 10px;
+}
+.faq-section .panel-title a
+{
+     width: 100%;
+     display: block;
+     text-align: left;
+     text-decoration: none;
+     padding: 10px 15px;
+     border-radius: 10px;
+}
+.faq-section
+{
+     padding-bottom: 50px;
+}
+.sale-tab-2, .resort-rooms, .day-out, .offer-tab
+{
+     background: #f5f5f5;
+}
+.sale-tab-2 .resort-table .row:nth-child(2),
+.resort-rooms .resort-table .row:nth-child(2),
+.day-out .resort-table .row:nth-child(2),
+.offer-tab .resort-table .row:nth-child(2),
+.interest-dayout .resort-table .row:nth-child(2),
+.resorts-bg .dayout-table .row:nth-child(2)
+
+{
+     padding: 0;
+     text-align: left;
+     background: #f5f5f5;
+     border-radius: 10px;
+}
+.sale-tab-2 .resort-table .row:nth-child(2) .col-md-3,
+.resort-rooms .resort-table .row:nth-child(2) .col-md-3,
+.day-out .resort-table .row:nth-child(2) .col-md-3,
+.offer-tab .resort-table .row:nth-child(2) .col-md-3,
+.interest-dayout .resort-table .row:nth-child(2) .col-md-3,
+.resorts-bg .dayout-table .row:nth-child(2) .col-md-3
+
+{
+     font-size: 15px;
+     text-align: right;
+     border-left: 1px solid #d0d0d0;
+}
+.sale-tab-2 .carousel, .resort-rooms .carousel, .day-out .carousel, .offer-tab .carousel
+{
+     border-radius: 10px;
+     box-shadow: 0 0 3px gray;
+}
+.sale-tab-2 .timeline-content .box,
+.resort-rooms .timeline-content .resort-box,
+.day-out .timeline-content .box,
+.offer-tab .timeline-content .box
+{
+     background: white;
+}
+.resort-rooms .resort-box h3, .resort-rooms .resort-box h4, .resort-rooms .resort-box h5, .resort-rooms .resort-box span:nth-child(1)
+{
+     color: black;
+     font-family: 'Open Sans', sans-serif;
+}
+.resort-rooms .resort-box .resort-table .row:nth-child(1)
+{
+     background: #8080801a !important;
+     color: black;
+}
+.resort-rooms .terms-sec h4
+{
+     color: black;
+}
+.resort-rooms .terms-sec
+{
+     background: white;
+     border-radius: 10px;
+}
+.tour-package-bg .package-location a
+{
+     text-decoration: none;
+     color: white;
+     width: 110px;
+     display: block;
+}
+.resort-tab .single-package-carasoul
+{
+     box-shadow: 0 0 3px gray;
+     transition: all ease-in 0.3s;
+}
+.two-column p
+{
+     margin: 0;
+     text-align: center;
+}
+.resort-tab .single-package-carasoul .package-details .package-ratings-review .two-column
+{
+     text-align: center;
+}
+.resort-tab .single-package-carasoul .package-details .package-ratings-review .two-column li:last-child
+{
+     float: none;
+}
+.resorts-bg .testimonial-area-5
+{
+     padding: 20px 0;
+}
+.resorts-bg .top-destination-area-5
+{
+     margin-top: -20px;
+     padding-bottom: 50px;
+}
+.savour-sec
+{
+     color: black;
+}
+.resorts-bg .visit-site
+{
+     text-align: center;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     background: white;
+}
+.resorts-bg .visit-site span
+{
+     color: #049dd9;
+}
+.rate-pg .resort-table, .conf-rate-pg .resort-table, .rate-pg .resort-table
+{
+     font-size: 15px;
+}
+.rate-pg .resort-table .row, .conf-rate-pg .resort-table .row, .rate-pg .resort-table .row
+{
+     padding-top: 6px;
+     padding-bottom: 6px;
+}
+.resort-table .col-md-2:not(:first-child), .box .col-md-3:not(:first-child)
+{
+     text-align: center;
+}
+.conf-rate-pg
+{
+     background-image: url("https://transparenttextures.com/patterns/subtle-white-feathers.png");
+}
+.conf-rate-pg .related-tour, .rate-pg .related-tour
+{
+     padding-bottom: 0;
+}
+.conf-rate-pg .col-md-1, .conf-rate-pg .col-md-6,
+.rate-pg .col-md-1, .rate-pg .col-md-6
+{
+     text-align: center;
+}
+.conf-rate-pg .col-md-6 .travel-primary-btn,
+.rate-pg .col-md-6 .travel-primary-btn
+{
+     width: 50%;
+}
+.conf-rate-pg .col-md-3, .conf-rate-pg .col-md-11,
+.rate-pg .col-md-3, .rate-pg .col-md-11
+{
+     text-align: left;
+}
+.mean-nav .dropdown-text
+{
+     width: 89% !important;
+}
+.menurates a
+{
+     cursor: pointer;
+}
+.compare-section-buttons
+{
+     margin: auto;
+     text-align: center;
+}
+#intoverlay, #intoverlay2, #intoverlay3, #intoverlay4, #intoverlay5,
+#intoverlaya, #intoverlayb, #intoverlayc, #intoverlayd, #intoverlaye, #intoverlayf,
+#intoverlayaa,
+#intoverlayaaa, #intoverlaybbb,
+#compare-section,
+#room-compare-section, #villa-compare-section, #suite-compare-section
+{
+     position: fixed; /* Sit on top of the page content */
+     display: none; /* Hidden by default */
+     width: 100%; /* Full width (cover the whole page) */
+     height: 100%; /* Full height (cover the whole page) */
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+     z-index: 1000; /* Specify a stack order in case you're using a different order for other elements */
+     cursor: pointer; /* Add a pointer on hover */
+     overflow-y: scroll;
+     text-align: center;
+     padding-top: 55px;
+     padding-bottom: 50px;
+}
+.package-places span
+{
+     font-weight: 400;
+}
+.package-places .details span
+{
+     font-weight: 400;
+}
+.package-places .floated-text-right
+{
+     font-size: 12px !important;
+     padding: 3px;
+     border-radius: 5px;
+}
+.package-places, .package-places p
+{
+     text-align: left !important;
+}
+.package-5-area .tour-description
+{
+     padding: 20px 0 0 20px;
+}
+.destination-bg .package-places .amenities-row span, .bidnwin .package-places .amenities-row span, .resort-tab .package-places .amenities-row span
+{
+     font-weight: 400;
+     font-size: 18px;
+}
+.room-rate
+{
+     padding: 5px;
+     border-radius: 10px;
+     border: 1px solid gray;
+     display: inline-block;
+     cursor: pointer;
+}
+.room-rate span
+{
+     color: red;
+     font-weight: 600;
+}
+iframe
+{
+     border: 1px solid lightgray;
+     border-radius: 10px;
+     width: 100%;
+}
+.blog-comments
+{
+     padding-bottom: 10px;
+}
+.blog-comments p
+{
+     font-size: 18px;
+}
+.blog-post-content .floated-text-right
+{
+     font-size: 13px;
+     padding: 4px;
+}
+.blog-post-content .blog-text-coloured
+{
+     font-size: 18px !important;
+     color: #f2911b !important;
+}
+.testimonial-messages h4
+{
+     margin-bottom: 25px;
+     line-height: 1.5;
+     font-weight: 600;
+}
+.resorts-bg .testimonial-area-5 .single-testimonial img
+{
+     border-radius: 50%;
+     width: 110px;
+}
+.resorts-bg .testimonial-area-5 .single-testimonial .testimonial-messages p,
+.resorts-bg .testimonial-area-5 .single-testimonial .author-bio h3,
+.resorts-bg .testimonial-area-5 .single-testimonial .author-bio span
+{
+     color: white;
+}
+.tour-description .col-md-12, .tour-description .head .col-md-12
+{
+     margin: 3px 0 10px 0;
+}
+.tour-description .head p
+{
+     margin: 0;
+     display: inline-block;
+     position: relative;
+}
+.tour-description .head p::before
+{
+     position: absolute;
+     left: 0;
+     bottom: -3px;
+     content: "";
+     width: 0%;
+     height: 1px;
+     content: "";
+     background: #faa61a;
+     transition: all ease-in-out 1s;
+}
+.tour-description .timeline:hover p::before
+{
+     width: 100%;
+}
+.club-area
+{
+     background-image: url(../images/wavesNegative.svg), url("https://transparenttextures.com/patterns/subtle-white-feathers.png");
+     background-repeat: repeat-x, repeat;
+     background-position: bottom left, top center;
+     background-size: 160% 60%, 100%;
+}
+.club-area .kkavion-ico
+{
+     margin: 0 auto;
+     transition: all ease-in-out 0.5s;
+}
+.club-area .kkavion-ico img
+{
+     width: 90px;
+     transition: all ease-in-out 0.5s;
+}
+.club-area .single-travel:hover img
+{
+     filter: invert(100%);
+}
+.club-area .single-travel:hover a, .club-area .single-travel:hover p
+{
+     color: white !important;
+}
+.club-area .single-travel 
+{
+     background: #ffffff none repeat scroll 0 0;
+     padding: 15px;
+     margin-bottom: 40px;
+     border-radius: 20px;
+     position: relative;
+     z-index: 2;
+     transition: all ease-in-out 0.5s;
+     margin-bottom: 20px;
+     border: 1px solid #c0c0c0;
+}
+.club-area .single-travel .travel-number
+{
+     float: left;
+     margin-right: 5px;
+     margin-top: -5px;
+}
+.club-area .single-travel .travel-number span 
+{
+     color: #034ea2;
+     font-weight: 500;
+     font-size: 33px;
+}
+.club-area .single-travel .travel-content h4 
+{
+     font-size: 20px;
+     color: #454545;
+     font-weight: 600;
+     transition: all 0.5s ease-in-out;
+}
+.club-area .single-travel .travel-content p 
+{
+     margin: 0;
+     line-height: 24px;
+     width: 100%;
+     text-align: center;
+     transition: all 0.5s ease-in-out;
+}
+.club-area .single-travel a
+{
+     color: #454545;
+     transition: all 0.5s ease-in-out;
+}
+.club-area .single-travel:hover 
+{
+     box-shadow: 0 0 5px gray;
+     cursor: pointer;
+     background: #0d6ee4;
+     border: 1px solid #ffffff00;
+}
+.compare-btn
+{
+     position: fixed;
+     bottom: 90px;
+     right: -98px;
+     z-index: 10;
+     transition: all ease-in-out 0.3s;
+}
+.compare-btn:hover
+{
+     right: 0;
+}
+.compare-btn .buttons
+{
+     background-color: #f2911b;
+     color: white;
+     display: block;
+     text-align: center;
+     cursor: pointer;
+     font-size: 18px;
+     text-transform: uppercase;
+     border-radius: 5px 0 0 5px;
+}
+.compare-btn i
+{
+     font-size: 24px;
+     padding-left: 5px;
+}
+.compare-btn span
+{
+     padding: 10px 5px;
+     display: inline-block;
+}
+#compare-section .container, #room-compare-section .container, #villa-compare-section .container, #suite-compare-section .container
+{
+     background: white;
+     font-size: 15px;
+     border-radius: 10px;
+}
+#compare-section .row, #room-compare-section .row, #villa-compare-section .row, #suite-compare-section .row
+{
+     padding: 5px 0;
+}
+#compare-section .row div:first-child, #room-compare-section .row div:first-child, #villa-compare-section .row div:first-child, #suite-compare-section .row div:first-child
+{
+     text-align: left;
+}
+#compare-section .col-md-2, #room-compare-section .col-md-2, #villa-compare-section .col-md-2, #suite-compare-section .col-md-2
+{
+     text-align: center;
+}
+#compare-section .section-title-version-2-black, #room-compare-section .section-title-version-2-black, #villa-compare-section .section-title-version-2-black, #suite-compare-section .section-title-version-2-black
+{
+     text-align: center !important;
+}
+#compare-section .comparison-title
+{
+     color: #049dd9;
+}
+.comparison-title
+{
+     color: #f2911b;
+     text-align: center;
+}
+#compare-section .heading div:not(:first-child), #room-compare-section .heading div:not(:first-child), #villa-compare-section .heading div:not(:first-child), #suite-compare-section .heading div:not(:first-child)
+{
+     font-weight: 600;
+}
+.room-compare
+{
+     top: -35px;
+     position: relative;
+     text-align: center;
+     display: inline-block;
+     cursor: pointer;
+     padding: 5px;
+}
+#mobnav .mean-link:nth-child(1)
+{
+     display: block;
+}
+#mobnav .mean-link:nth-child(2)
+{
+     display: none;
+}
+.pois-page #mobnav .mean-link:nth-child(1)
+{
+     display: none;
+}
+.pois-page #mobnav .mean-link:nth-child(2)
+{
+     display: block;
+}
+.package-long-btn
+{
+     cursor: pointer;
+}
+
+.calendar-sec
+{
+     position: fixed;
+     bottom: 40px;
+     right: -105px;
+     z-index: 10;
+     transition: all ease-in-out 0.3s;
+}
+.calendar-sec:hover
+{
+     right: 0;
+}
+.calendar-sec .buttons
+{
+     background-color: #049dd9;
+     color: white;
+     display: block;
+     text-align: center;
+     cursor: pointer;
+     font-size: 18px;
+     text-transform: uppercase;
+     border-radius: 5px 0 0 5px;
+}
+.calendar-sec i
+{
+     font-size: 24px;
+     padding-left: 5px;
+}
+.calendar-sec span
+{
+     padding: 10px 5px;
+     display: inline-block;
+}
+#calendar a:hover .fc-event-title
+{
+     color: inherit;
+}
+#calendar .fc-toolbar-chunk
+{
+     text-align: center;
+}
+#calendar .fc-today-button
+{
+     background-color: #ffdab3;
+     color: #232323;
+}
+#calendar .fc-header-toolbar
+{
+     background-size: cover !important;
+     background-repeat: round !important;
+}
+#calendar .fc-col-header-cell
+{
+     background-color: #049dd9;
+}
+#calendar .fc-col-header-cell a
+{
+     color: white;
+}
+.stars 
+{
+     color: gold;
+     position: relative;
+     font-size: 18px;
+     display: inline-block;
+}
+.cover
+{
+     background: white;
+     height: 100%;
+     overflow: hidden;
+     mix-blend-mode: color;
+     top: 0;
+     right: 0;
+     position: absolute;
+}
+.package-places .stars
+{
+     float: right;
+     top: -3px;
+}
+.outskirts-pg .stars
+{
+     float: right;
+     top: 1px;
+}
+.sale-tab-2 .stars
+{
+     top: 0px;;
+}
+.package-ratings-review .stars, .resort-tab .package-ratings-review
+{
+     text-align: center;
+}
+.out-stars .stars
+{
+     float: left;
+}
+.popular-packages-carasoul .package-details .package-two-col
+{
+     position: relative;
+     padding-top: 10px;
+}
+.popular-packages-carasoul .package-details .package-two-col .two-column li
+{
+     display: inline-block;
+     font-size: 15px;
+     font-weight: 600;
+     color: #353535;
+}
+.popular-packages-carasoul .package-details .package-two-col .two-column li:last-child
+{
+     float: right;
+}
+.popular-packages-carasoul .package-details .package-two-col .two-column li:last-child p
+{
+     font-weight: 400;
+}
+.red
+{
+     color: red;
+     font-weight: 600 !important;
+}
+.package-5-area .single-package-carasoul
+{
+     box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.package-5-area .single-package-carasoul:hover
+{
+     box-shadow: 0 0 10px rgb(0,0,0,.5) !important;
+}
+.leisure-page-area .btn, .resorts-bg .btn
+{
+     background: none;
+     border: 1px solid lightgray;
+     transition: all 0.3s ease-in-out;
+     background: white;
+}
+.leisure-page-area .btn:hover, .resorts-bg .btn:hover
+{
+     color: white;
+     border: 1px solid #049dda;
+     background: #049dd9;
+}
+.quick-links
+{     
+     padding: 25px 0;
+     font-size: 18px;
+}
+.quick-links .btn
+{
+     font-size: 16px;
+     padding: 6px 10px;
+}
+.resort-table li span:first-child
+{
+     font-weight: bold;
+}
+.resort-table .col-md-9
+{
+     padding-top: 10px;
+}
+.disc-section
+{
+     padding-bottom: 5px;
+}
+.disc-section li
+{
+     padding: 0;
+}
+.disc-section li span
+{
+     font-weight: 400;
+}
+.disc-section li:first-child span
+{
+     font-size: 18px;
+}
+.disc-section li:nth-child(2) span
+{
+     font-size: 20px;
+     font-weight: bold !important;
+}
+.disc-section li:last-child span
+{
+     font-size: 11px;
+     color: gray;
+}
+.disc-section li span:first-child
+{
+     font-weight: 400;
 }

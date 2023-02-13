@@ -3,7 +3,7 @@
 
 	$(window).on('load', function(){
 		$('#status').fadeOut();
-		$('#preloader').delay(350).fadeOut('fast');
+		$('#preloader').delay(100).fadeOut('fast');
 		$(window).stellar({});
 	});
 
@@ -408,5 +408,123 @@
         title: 'Text content!',
         content: 'Simple modal!',
     });
-
 })(jQuery);
+
+
+
+
+// Open the full screen search box
+function openSearch() {
+	document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  // Close the full screen search box
+  function closeSearch() {
+	document.getElementById("myOverlay").style.display = "none";
+  }
+
+
+function openOverlay()
+{
+	document.getElementById("intoverlay").style.display = "block";
+	document.getElementById("intoverlay2").style.display = "block";
+	document.getElementById("intoverlay3").style.display = "block";
+	document.getElementById("intoverlay4").style.display = "block";
+	document.getElementById("intoverlay5").style.display = "block";
+	document.getElementById("intoverlay6").style.display = "block";
+}
+function closeOverlay()
+{
+	document.getElementById("intoverlay").style.display = "none";
+	document.getElementById("intoverlay2").style.display = "none";
+	document.getElementById("intoverlay3").style.display = "none";
+	document.getElementById("intoverlay4").style.display = "none";
+	document.getElementById("intoverlay5").style.display = "none";
+	document.getElementById("intoverlay6").style.display = "none";
+}
+function openOverlay1()
+{
+	document.getElementById("intoverlaya").style.display = "block";
+	document.getElementById("intoverlayaa").style.display = "block";
+	document.getElementById("intoverlayaaa").style.display = "block";
+}
+function closeOverlay1()
+{
+	document.getElementById("intoverlaya").style.display = "none";
+	document.getElementById("intoverlayaa").style.display = "none";
+	document.getElementById("intoverlayaaa").style.display = "none";
+}
+function openOverlay2()
+{
+	document.getElementById("intoverlayb").style.display = "block";
+	document.getElementById("intoverlaybbb").style.display = "block";
+}
+function closeOverlay2()
+{
+	document.getElementById("intoverlayb").style.display = "none";
+	document.getElementById("intoverlaybbb").style.display = "none";
+}
+function openOverlay3()
+{
+	document.getElementById("intoverlayc").style.display = "block";
+}
+function closeOverlay3()
+{
+	document.getElementById("intoverlayc").style.display = "none";
+}
+function openOverlay4()
+{
+	document.getElementById("intoverlayd").style.display = "block";
+}
+function closeOverlay4()
+{
+	document.getElementById("intoverlayd").style.display = "none";
+}
+function openOverlay5()
+{
+	document.getElementById("intoverlaye").style.display = "block";
+}
+function closeOverlay5()
+{
+	document.getElementById("intoverlaye").style.display = "none";
+}
+function openOverlay6()
+{
+	document.getElementById("intoverlayf").style.display = "block";
+}
+function closeOverlay6()
+{
+	document.getElementById("intoverlayf").style.display = "none";
+}
+function openCompare()
+{
+	document.getElementById("compare-section").style.display = "block";
+}
+function closeCompare()
+{
+	document.getElementById("compare-section").style.display = "none";
+}
+function openRoomCompare()
+{
+	document.getElementById("room-compare-section").style.display = "block";
+}
+function closeRoomCompare()
+{
+	document.getElementById("room-compare-section").style.display = "none";
+}
+function openVillaCompare()
+{
+	document.getElementById("villa-compare-section").style.display = "block";
+}
+function closeVillaCompare()
+{
+	document.getElementById("villa-compare-section").style.display = "none";
+}
+function openSuiteCompare()
+{
+	document.getElementById("suite-compare-section").style.display = "block";
+}
+function closeSuiteCompare()
+{
+	document.getElementById("suite-compare-section").style.display = "none";
+}

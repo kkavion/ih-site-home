@@ -3,17 +3,30 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .single-item{margin-bottom: 30px;}
     .single-item:last-child{margin-bottom: 0px;}
-
-    
-    
-    .footer-title img
+    .footer-title .logo1
     {
-        padding: 0 110px;
+        display: none;
     }
-    .tparrows {display: none;}
+    #calendar-section iframe
+    {
+        height: 43vmax;
+    }
+    .tparrows
+    {
+        top: 90% !important;
+        transform: matrix(1) !important;
+    }
+    #discstick
+    {
+        margin: 5% 30% !important;
+    }
+    .footer-title .logo2
+    {
+        padding: 0 35%;
+    }
     .tp-bannertimer
     {
-        top: 495px;
+        bottom: 0;
     }
     .mean-bar img
     {
@@ -28,6 +41,38 @@
     {
          top: calc(100% - (30rem * 2));
          align-items: center;
+    }
+    .x-essence .subscribe-form-box
+    {
+        margin: 0 !important;
+    }
+    .carousel-inner .img2
+    {
+        display: none !important;
+    }
+    .mean-bar .search-pc
+    {
+        display: none;
+    }
+    .tp-parallax-wrap:nth-child(4)
+    {
+         top: 50% !important;
+    }
+    .tp-parallax-wrap:nth-child(3)
+    {
+         top: 35% !important;
+    }
+    .title-line-4 h2, .title-line-42 h3
+    {
+        padding-left: 15px !important;
+    }
+    .header-btn-4 
+    {
+     padding-left:15px!important
+    }
+    .top-destination-area .search-btn
+    {
+        padding: 0% 45% !important;;
     }
 
 
@@ -98,7 +143,7 @@
 
 
 /*========= index 04 ==========*/
-.header-bottom-area-4 .logo-area {padding: 65px 0 15px;}
+.header-bottom-area-4 .logo-area {padding: 65px 0 15px;display: none;}
 .tabbased-search-area-4 { background: #ffffff;}
 
 /*========= index 05 ==========*/
@@ -115,17 +160,61 @@
 .single .blog-comments .single-comments h4 {text-align: center;}
 
 
-.header-bottom-area
-{
-    display: none !important;
-}
+
 }
 
 /*======================  Mobile Layout: 320px. =======================  */
 
 @media only screen and (max-width: 767px) {
+    .club-area
+    {
+        background-size: 150% 70% !important;
+    }
     .single-item{margin-bottom: 30px;}
     .single-item:last-child{margin-bottom: 0px;}
+    .tparrows {display: none;}
+    #calendar .fc-toolbar-title
+    {
+        font-size: 1.4em;
+    }
+    #calendar-section iframe
+    {
+        height: 355px;
+    }
+    #calendar .fc-button
+    {
+        font-size: 0.8em !important;
+    }
+    #calendar table
+    {
+        font-size: 0.8em !important;
+    }
+    
+    .turn-off
+    {
+        display: none;
+    }    
+    #compare-section .comparison-title h1, #room-compare-section .comparison-title h1, #villa-compare-section .comparison-title h1, #suite-compare-section .comparison-title h1
+    {
+        display: none;
+    }
+    .top-destination-area-5 .single-destionation-5 .destination-5-description
+    {
+        padding: 25px 10px;
+    }
+    .top-destination-area-5 .amenities-row span
+    {
+        padding: 0 3px !important;
+    }
+    .bidnwin
+    {
+        background-position: center !important;
+        background-size: cover !important;
+    }
+    .top-destination-area .search-btn
+    {
+        padding: 0 40% !important;
+    }
     .mean-bar img
     {
         max-height: 45px;
@@ -152,11 +241,11 @@
     }
     .tp-parallax-wrap:nth-child(3)
     {
-         top: 30% !important;
+         top: 40% !important;
     }
     .tp-parallax-wrap:nth-child(4)
     {
-         top: 37% !important;
+         top: 50% !important;
     }
     .tp-parallax-wrap:nth-child(5)
     {
@@ -164,8 +253,156 @@
     }
     .tp-parallax-wrap:nth-child(6)
     {
-         top: 37% !important;
+         top: 25% !important;
     }
+    .sec1 div
+    {
+        margin: 3px 0 !important;
+    }
+    .sec1 span:nth-child(1)
+    {
+        display: none;
+    }
+    .sec1
+    {
+        padding-bottom: 0px;
+    }
+    #discstick 
+    {
+        width: 85px !important;
+        height: 25px !important;
+        background: red !important;
+        position: relative !important;
+        -moz-border-radius: 10px !important;
+        -webkit-border-radius: 10px !important;
+        border-radius: 50px !important;
+        margin: 10px !important;
+        right: 15px !important;
+    }
+    #discstick span, #discstick a
+    {
+        margin: 10px !important;
+        font-size: 18px !important;
+        margin-left: 8px !important;
+    }
+    .package-location #discstick
+    {
+        margin: 0 !important;
+        transform: translate(-5px,1px);
+        right: 0 !important;
+    }
+    .package-location #discstick a
+    {
+        top: 1px !important;
+        margin: 0 !important;
+    }
+    .main-menu .search-pc
+    {
+         display: none !important;
+    }
+    .footer-social-media .footer-title
+    {
+        padding: 20px 0 20px !important;
+    }
+    .x-text-center
+    {
+        padding: 10px 0 !important;
+    }
+    .x-margin 
+    {
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .x-margin h3
+    {
+        text-align: center;
+    }
+    .related-tour .row
+    {
+        padding-top: 0 !important;
+    }
+    .related-tour .single-package
+    {
+        margin-bottom: 30px !important;
+    }
+    .amenities-sec h4
+    {
+        text-align: center !important;
+        margin-left: 0 !important;
+    }
+    .tour-description .carousel
+    {
+        margin-top: 20px !important;
+    }
+    .tour-description h4, .tour-description h5, .tour-description p
+    {
+        text-align: center;
+    }
+    .single-travel-blog .blog-content
+    {
+     padding: 10px;
+    }
+    .blog-post-content h4,.blog-post-content h5,.blog-post-content p
+    {
+        text-align: left
+    }
+    .tour-description .tail h4, .tour-description .head h4
+    {
+        text-align: left !important;
+    }
+    .timeline-content .discount-package-4-btn
+    {
+        padding-bottom: 20px;
+    }
+    .carousel-inner .img1
+    {
+        display: none !important;
+    }
+    .single-bredcurms
+    {
+        background-position: center bottom;
+        padding: 0;
+        height: auto;
+    }
+    .single-bredcurms .bredcrums-content
+    {
+        padding-top: 150px;
+        padding-bottom: 30px;
+    }  
+    .gsc-control-cse
+    {
+        margin: 100px 10px !important;
+    }
+    .gsc-control-cse button
+    {
+        padding: 15px !important;
+        border: none;
+        background: gray;
+    }
+    .overlay1 .closebtn
+    {
+        font-size: 40px !important;
+    }
+    .testimonial-area-5 .single-testimonial .img-box img
+    {
+        width: auto !important;
+        height: 250px !important;
+        margin-left: 0 !important;
+    }
+    .testimonial-area-5 .single-testimonial .col-md-5
+    {
+        padding: 0 !important;
+    }
+    .testimonial-area-5
+    {
+        margin: -20px 0 auto !important;
+    }
+    .owl-carousel
+    {
+        padding: 0 20px !important;
+    }
+
 
 
 /*========= index ==========*/
@@ -311,6 +548,34 @@
     {
         visibility: hidden;
     }
+    .single-hotels ul
+    {
+         padding: 0 !important;
+    }
+    .single-package-carasoul
+    {
+        margin-bottom: 25px;
+    }
+    .popular-packages-carasoul .owl-nav
+    {
+        top: 20vw !important;
+        position: absolute !important;
+    }
+    .popular-packages-carasoul .owl-nav .owl-next
+    {
+        position: absolute;
+        left: 74vw; 
+    }
+    .popular-packages-carasoul .owl-nav .owl-prev, .popular-packages-carasoul .owl-nav .owl-next
+    {
+        background: #00000054 !important;
+    }
+    .popular-packages-carasoul .owl-nav .owl-prev:hover, .popular-packages-carasoul .owl-nav .owl-next:hover
+    {
+        background: #3063771f !important;
+    }
+
+
 }
 
 
@@ -336,10 +601,28 @@
 /*========= index 05 ==========*/
     .top-destination-area-5 .single-destionation-5 .destination-5-description .rating-review-5 li:last-child { float: none; }
     .hotels-area-2 .single-hotels-2 .hotel-image img{width: 100%;}
+
+    
+    #calendar .fc-button
+    {
+        font-size: 0.8em !important;
+    }
+    #calendar-section iframe
+    {
+        height: 65vmax;
+    }
+    #calendar table
+    {
+        font-size: 0.85em !important;
+    }
     
     .carousel-indicators
     {
         visibility: hidden;
+    }
+    .single-hotels ul
+    {
+         padding: 0 !important;
     }
     .modal-dialog-centered
     {
@@ -354,39 +637,100 @@
     {
         padding: 0 200px;
     }
+    .footer-title .logo1
+    {
+        padding: 0 35%
+    }
+    .footer-title .logo2
+    {
+        display: none;
+    }
     .career-menu .col-md-4:hover .career-bottom-area-hidden-btn
     {
          opacity: 1;
          visibility: visible;
          bottom: 0px;
     }
+    .tparrows {display: none;}
+    #discstick 
+    {
+         width: 100px !important;
+         height: 35px !important;
+         background: red !important;
+         position: relative !important;
+         -moz-border-radius: 10px !important;
+         -webkit-border-radius: 10px !important;
+         border-radius: 50px !important;
+         margin: 10px !important;
+    }
+    #discstick span
+    {
+         margin: 12px !important;
+    }
+    .package-location #discstick a
+    {
+        top: 1px !important;
+        margin: 0 !important;
+    }
+    .tp-parallax-wrap:nth-child(3)
+    {
+         top: 25% !important;
+    }
+    .tp-parallax-wrap:nth-child(4)
+    {
+         top: 40% !important;
+    }
+    .tp-parallax-wrap:nth-child(5)
+    {
+         top: 37% !important;
+    }
+    .tp-parallax-wrap:nth-child(6)
+    {
+         top: 65% !important;
+    }
+    .popular-packages-carasoul .owl-nav .owl-next
+    {
+        position: absolute;
+        left: 80vw;
+    }
+
 }
 
 @media only screen and (max-width: 600px)
 {
-    .sale-tab .single-bredcurms
+    
+    .footer-title .logo1
     {
-        padding: 120px 0 0 0;
-        height: 850px;
+        padding: 0px 35%;
     }
-    .footer-title img
+    .footer-title .logo2
     {
-        padding: 0 110px;
+        display: none;
     }
 }
 @media screen and (min-width: 991px)
 {
-    .footer-title img
+    
+    .footer-title .logo1
     {
         padding: 0 60px;
+        display: none;
+    }
+    #calendar-section iframe
+    {
+        height: 775px;
+    }
+    .footer-title .logo2
+    {
+        padding: 0px 45%;
     }
     .footer-area .single-footer .foot
     {
-        padding-top: 60px;
+        padding-top: 15px;
     }
     .tp-bannertimer
     {
-        top: 545px
+        bottom: 0;
     }
     .section-title img
     {
@@ -397,6 +741,7 @@
          min-height: calc(100% - (1.75rem * 2));
          display: flex;
          align-items: center;
+         width: fit-content;
     }
     .management-area .single-testimonial .testimonial-messages p
     {
@@ -413,18 +758,68 @@
     }
     .tp-parallax-wrap:nth-child(4)
     {
-         top: 50% !important;
+         top: 52% !important;
     }
     .tp-parallax-wrap:nth-child(5)
     {
          top: 60% !important;
     }
-    .tp-parallax-wrap:nth-child(6)
+    .carousel-inner .img2
     {
-         top: 65% !important;
+        display: none !important;
     }
-    .tp-parallax-wrap:nth-child(7)
+    .popular-packages-carasoul .owl-nav .owl-prev, .popular-packages-carasoul .owl-nav .owl-next
     {
-         top: 75% !important;
+        background: #049dd9 !important;
+    }
+    .popular-packages-carasoul .owl-nav .owl-prev:hover, .popular-packages-carasoul .owl-nav .owl-next:hover
+    {
+        background: #049dd9 !important;
+    }
+    .header-bottom-area .row
+    {
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.075) 20%, rgba(255,255,255,0.075) 85%, rgba(255,255,255,0) 100%); 
+    }
+    .sticky .header-bottom-area .row
+    {
+        background: none;
+    }
+    #compare-section .comparison-title span, #room-compare-section .comparison-title span, #villa-compare-section .comparison-title span, #suite-compare-section .comparison-title span
+    {
+        display: none;
+    }
+    #compare-section .comparison-title, #room-compare-section .comparison-title, #villa-compare-section .comparison-title, #suite-compare-section .comparison-title
+    {
+        padding: 20px 0 !important;
+    }
+}
+@media screen and (max-width: 480px) {    
+    .disc-section li span
+    {
+        font-weight: 400;
+        font-size: 11px;
+    }
+    .disc-section li:first-child span
+    {
+        font-size: 14px !important;
+    }
+    .disc-section li:nth-child(2) span
+    {
+        font-size: 15px !important;
+        font-weight: bold !important;
+    }
+    .disc-section li:last-child span
+    {
+        font-size: 9px !important;
+        color: gray;
+    }
+    .amenities-row .material-icons
+    {
+        font-size: 17px !important;
+    }
+    .amenities-row
+    {
+        font-size: 0;
     }
 }
